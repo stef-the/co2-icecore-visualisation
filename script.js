@@ -1,16 +1,24 @@
 let parsed = [];
 let chartdata = [];
 const that = "<b><a href=\"https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/surface/txt/co2_mlo_surface-flask_1_ccgg_month.txt\">this</a></b>"
+
+// Fetch chart data from 'data.txt', format it and draw chart
+// Done in jQuery async using ajax
 $.ajax({
   url: "data.txt",
   success: function (data) {
+    // Split rows
     const lists = data.split("\n");
     let fragment = [];
+
+    // Remove commented rows
     lists.forEach((element) => {
       if (element[0] !== "#") {
         fragment.push(element.split("\r")[0].split(" "));
       }
     });
+
+    // Split columns
     fragment.forEach((element) => {
       let i = element.length;
       while (i--) {
@@ -20,18 +28,20 @@ $.ajax({
       }
       parsed.push(element.slice(1, 4));
     });
+
+    // Convert date to Unix Timestamp and add data point
     parsed.forEach((element) => {
-      chartdata.push([Number(new Date(`${element[0]}-${element[1]}`).getTime()),Number(element[2])]);
+      chartdata.push([Number(new Date(`${element[0]}-${element[1]}`).getTime()), Number(element[2])]);
     });
 
-    console.log(chartdata)
+    // Draw chart
     Highcharts.stockChart("container", {
         rangeSelector: {
           selected: 1,
         },
       
         title: {
-          text: "Global Atmoshperic Carbon Dioxide (CO2) according to "+that,
+          text: "Global Atmospheric Carbon Dioxide (CO2) according to "+that,
         },
       
         series: [
