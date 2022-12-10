@@ -6,11 +6,11 @@ Highcharts.getJSON('data.json', function (data) {
         },
 
         title: {
-            text: 'AAPL Stock Price Wee'
+            text: 'Global Atmoshperic Carbon Dioxide (CO2)'
         },
 
         series: [{
-            name: 'AAPL',
+            name: 'CO2',
             data: data,
             tooltip: {
                 valueDecimals: 2
