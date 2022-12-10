@@ -1,7 +1,6 @@
 let parsed = [];
 let chartdata = [];
-const that = "<b><a href=\"https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/surface/txt/co2_mlo_surface-flask_1_ccgg_month.txt\">this</a></b>"
-
+const that = "<b><a href=\"https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/surface/txt/co2_mlo_surface-flask_1_ccgg_month.txt\">NOAA Mauna Loa Observatory</a></b>"
 // Fetch chart data from 'data.txt', format it and draw chart
 // Done in jQuery async using ajax
 $.ajax({
