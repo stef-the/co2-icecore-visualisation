@@ -40,9 +40,11 @@ $.ajax({
         },
       
         title: {
-          text: "Global Atmospheric Carbon Dioxide (CO2) according to "+that,
+          text: " Atmospheric Carbon Dioxide (CO2) "
         },
-      
+        subtitle: {
+            text: "according to "+that,
+          },
         series: [
           {
             name: "CO2",
