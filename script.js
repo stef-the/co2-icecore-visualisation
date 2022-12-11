@@ -47,12 +47,13 @@ $.ajax({
           },
         series: [
           {
-            name: "CO2",
+            name: "MLO CO2",
+            id: "mlo_co2",
             data: chartdata,
             tooltip: {
               valueDecimals: 2,
             },
-          },
+          }
         ],
       });
   },
