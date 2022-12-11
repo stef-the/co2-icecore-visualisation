@@ -57,12 +57,12 @@ $.ajax({
           {
             type : 'flags',
             data : [{
-                x : 1478217600,      // Point where the flag appears
+                x : 1478217600000,      // Fri, 04 Nov 2016 00:00:00 +0000 Point where the flag appears
                 title : 'Paris Agreement', // Title of flag displayed on the chart 
                 text : 'Paris Agreement Enforced'   // Text displayed when the flag are highlighted.
             },
             {
-                x : 1588291200,      // Point where the flag appears
+                x : 1588291200000,      // Fri, 01 May 2020 00:00:00 +0000 Point where the flag appears
                 title : 'Covid Lockdown', // Title of flag displayed on the chart 
                 text : 'Covid Lockdowns Enforced'   // Text displayed when the flag are highlighted.
             }],
