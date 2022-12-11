@@ -9,6 +9,16 @@
     <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
 
+    //stock tools
+    <script src="https://code.highcharts.com/indicators/indicators-all.js"></script>
+    <script src="https://code.highcharts.com/modules/drag-panes.js"></script>
+    <script src="https://code.highcharts.com/modules/annotations-advanced.js"></script>
+    <script src="https://code.highcharts.com/modules/price-indicator.js"></script>
+    <script src="https://code.highcharts.com/modules/full-screen.js"></script>
+    <script src="https://code.highcharts.com/modules/stock-tools.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/stocktools/gui.css">
+    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
+
     <script src="script.js"></script>
 
     <title>Global Atmoshperic Carbon Dioxide (CO2)</title>
@@ -24,8 +34,12 @@
     </style>
   </head>
   <body>
-    <img src="images/logos/Secured Carbon horizontal light bg.png" height="40vh">
-    <img src="https://gml.noaa.gov/webdata/logos/noaa_small.png" height="40vh">
+    <div style="padding:2vh;">
+      <img src="images/logos/Secured Carbon horizontal light bg.png" height="40vh" style="padding-right:10vh;">
+      <img src="https://gml.noaa.gov/webdata/logos/noaa_small.png" height="40vh" style="padding-right:10vh;">
+      <img src="https://scrippsco2.ucsd.edu/assets/images/sio_logo_small.png" height="40vh" style="padding-right:10vh;">
+      <img src="https://data.worldbank.org/assets/images/logo-wb-header-en.svg" height="40vh" style="padding-right:10vh;">
+  </div>
     <div id="container"></div>
   </body>
 </html>
