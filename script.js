@@ -53,7 +53,23 @@ $.ajax({
             tooltip: {
               valueDecimals: 2,
             },
-          }
+          },
+          {
+            type : 'flags',
+            data : [{
+                x : 1478217600,      // Point where the flag appears
+                title : 'Paris Agreement', // Title of flag displayed on the chart 
+                text : 'Paris Agreement Enforced'   // Text displayed when the flag are highlighted.
+            },
+            {
+                x : 1588291200,      // Point where the flag appears
+                title : 'Covid Lockdown', // Title of flag displayed on the chart 
+                text : 'Covid Lockdowns Enforced'   // Text displayed when the flag are highlighted.
+            }],
+            onSeries : 'mlo_co2',  // Id of which series it should be placed on. If not defined 
+                            // the flag series will be put on the X axis
+            shape : 'flag'  // Defines the shape of the flags.
+        }
         ],
       });
   },
