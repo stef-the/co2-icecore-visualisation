@@ -1,5 +1,5 @@
 let parsed = [];
-let chartdata = [];
+let mlodata = [];
 const that = "<b><a href=\"https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/surface/txt/co2_mlo_surface-flask_1_ccgg_month.txt\">NOAA Mauna Loa Observatory</a></b>"
 // Fetch chart data from 'data.txt', format it and draw chart
 // Done in jQuery async using ajax
@@ -30,7 +30,7 @@ $.ajax({
 
     // Convert date to Unix Timestamp and add data point
     parsed.forEach((element) => {
-      chartdata.push([Number(new Date(`${element[0]}-${element[1]}`).getTime()), Number(element[2])]);
+      mlodata.push([Number(new Date(`${element[0]}-${element[1]}`).getTime()), Number(element[2])]);
     });
 
     // Draw chart
@@ -49,7 +49,7 @@ $.ajax({
           {
             name: "MLO CO2",
             id: "mlo_co2",
-            data: chartdata,
+            data: mlodata,
             tooltip: {
               valueDecimals: 2,
             },
@@ -57,7 +57,7 @@ $.ajax({
           {
             type : 'flags',
             data : [{
-                x : 1478217600000,      // Fri, 04 Nov 2016 00:00:00 +0000 Point where the flag appears
+                x : 1478217600000,      // 1478217600000 or 2016-11-04 20:00:00 or Fri, 04 Nov 2016 00:00:00 +0000 Point where the flag appears
                 title : 'Paris Agreement', // Title of flag displayed on the chart 
                 text : 'Paris Agreement Enforced'   // Text displayed when the flag are highlighted.
             },
