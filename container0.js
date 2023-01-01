@@ -4,7 +4,7 @@ const that = "<b><a href=\"https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/
 // Fetch chart data from 'data.txt', format it and draw chart
 // Done in jQuery async using ajax
 $.ajax({
-  url: "data.txt",
+  url: "./data/gml_data.txt",
   success: function (data) {
     // Split rows
     const lists = data.split("\n");
@@ -33,8 +33,9 @@ $.ajax({
       mlodata.push([Number(new Date(`${element[0]}-${element[1]}`).getTime()), Number(element[2])]);
     });
 
+    console.log(mlodata)
     // Draw chart
-    Highcharts.stockChart("container", {
+    Highcharts.stockChart("container0", {
         rangeSelector: {
           selected: 1,
         },
