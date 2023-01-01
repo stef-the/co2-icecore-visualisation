@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    
+
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/data.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
@@ -18,15 +18,25 @@
     <script src="https://code.highcharts.com/modules/stock-tools.js"></script>
     <script src="https://code.highcharts.com/stock/indicators/indicators.js"></script>
     <script src="https://code.highcharts.com/stock/indicators/macd.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/stocktools/gui.css">
-    <link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/annotations/popup.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.highcharts.com/css/stocktools/gui.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.highcharts.com/css/annotations/popup.css"
+    />
 
-    <script src="script.js"></script>
+    <script src="container0.js"></script>
+    <script src="container1.js"></script>
 
     <title>Global Atmoshperic Carbon Dioxide (CO2)</title>
 
     <style>
-      #container {
+      #container0,
+      #container1 {
         min-height: 400px;
         min-width: 310px;
         width: 99vw;
@@ -36,12 +46,29 @@
     </style>
   </head>
   <body>
-    <div style="padding:1vh;">
-      <img src="images/logos/Secured Carbon horizontal light bg.png" height="40vh" style="padding-right:1vh;">
-      <img src="https://gml.noaa.gov/webdata/logos/noaa_small.png" height="40vh" style="padding-right:5vh;">
-      <img src="https://scrippsco2.ucsd.edu/assets/images/sio_logo_small.png" height="40vh" style="padding-right:5vh;">
-      <img src="https://data.worldbank.org/assets/images/logo-wb-header-en.svg" height="40vh" style="padding-right:1vh;">
-  </div>
-    <div id="container"></div>
+    <div style="padding: 1vh">
+      <img
+        src="images/logos/Secured Carbon horizontal light bg.png"
+        height="40vh"
+        style="padding-right: 1vh"
+      />
+      <img
+        src="https://gml.noaa.gov/webdata/logos/noaa_small.png"
+        height="40vh"
+        style="padding-right: 5vh"
+      />
+      <img
+        src="https://scrippsco2.ucsd.edu/assets/images/sio_logo_small.png"
+        height="40vh"
+        style="padding-right: 5vh"
+      />
+      <img
+        src="https://data.worldbank.org/assets/images/logo-wb-header-en.svg"
+        height="40vh"
+        style="padding-right: 1vh"
+      />
+    </div>
+    <div id="container0"></div>
+    <div id="container1"></div>
   </body>
 </html>
